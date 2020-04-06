@@ -5,9 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo List App</title>
   <link rel="stylesheet" href="style.css">
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Todo List App</h1>
+  <div id="container">
+    <div class="head">
+      <span>TODO LIST</span>
+      <span id="addTodo">+</span>
+    </div>
+    <input type="text" name="newTodo" id="newTodo" placeholder="Add new Todo">
+    <div class="todos">
+      <div class="todo">
+        Get groceries
+      </div>
+      <div class="todo">
+        Go to the gym
+      </div>
+      <div class="todo">
+        Study
+      </div>
+      <div class="todo">
+        Walk Rusty
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
