@@ -2,16 +2,15 @@ html {
   height: 100%;
 }
 body {
-  /* height: 100%; */
   background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
   font-family: 'Roboto', sans-serif;
 }
 
 #container {
-  /* background-color: #000; */
   width: 300px;
-  /* border: 1px solid #000; */
   margin: 100px auto 0 auto;
+  background-color: #ededed;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
 }
 
 #container .head {
@@ -34,31 +33,56 @@ body {
 }
 
 #container #newTodo {
-  width: 260px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
   padding: 10px 20px;
   border: 0;
-  background-color: #ededed;
   color: #000;
   font-size: 1em;
+  background: none;
+  border: 3px solid rgba(0, 0, 0, 0);
 }
-#container .todo {
+
+#container #newTodo:focus {
+  outline: none;
+  border: 3px solid #00C9FF;
+}
+
+#container .todos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#container .todos li {
+  line-height: 40px;
+  color: #666;
+}
+
+#container .todos li:nth-child(odd) {
   background-color: #fff;
-  display: flex;
-  height: 39px;
 }
 
-#container .todo:nth-child(even) {
-  background-color: #ededed;
+#container .todos .completed {
+  text-decoration: line-through;
+  color: gray;
 }
 
-#container .todo span {
-  padding: 10px 20px;
-  display: inline-block
+.delete {
+  background-color: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
 }
 
-#container .todo .delete {
-  background-color: #d9534f;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px 10px;
+li:hover span {
+  width: 40px;
+  opacity: 1;
 }
